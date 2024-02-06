@@ -20,7 +20,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-6a66.up.railway.app', 'https://*.127.0.0.1', 'csmithandson.com', 'www.csmithandson.com']
+    'https://web-production-6a66.up.railway.app', 'https://*.127.0.0.1', 'https://csmithandson.com', 'https://www.csmithandson.com', 'https://site.lv']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'contact',
     'ckeditor',
     'storages',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 
